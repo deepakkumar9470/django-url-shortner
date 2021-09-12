@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;700&display=swap" rel="stylesheet">
+    <title>URL APP</title>
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;background-color: #74b9ff;font-family: 'Urbanist', sans-serif;}
+         h1{margin:0 auto; text-align:center;font-weight: 700;color: #f1f2f6;font-size: 50px;
+            text-shadow: 4px 4px 10px rgb(29, 15, 221),
+                -4px 4px 10px rgb(29, 15, 221),
+                -4px -4px 10px rgb(29, 15, 221),
+                4px -4px 10px rgb(29, 15, 221);}
+         .container{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              margin-top: 100px;
+         }
+          form{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              width: 100%;
+              margin-top: 50px;
+          }
+          input{
+              width: 700px;
+              height: 45px;
+              background-color: #fff;
+              border-radius: 5px;
+              padding: 10px;
+              font-size: 20px;
+              border: none;
+          }
+          input:focus{outline: none;}
+          button{
+              width: 150px;
+              height: 40px;
+              border: none;
+              padding: 5px;
+              border-radius: 5px;
+              outline: none;
+              color: #fff;
+              font-size: 18px;
+              margin-top: 10px;
+              cursor: pointer;
+              background-color: #000;
+          }
+          a{
+              text-decoration: none;
+              margin-top: 10px;
+              color: #fff;
+              font-size: 22px;
+          }
+          span{
+              font-weight: bold;color: #2f3542;font-size: 16px;
+          }
+    </style>
+    
+</head>
+<body>
+
+           <div class="container">
+               <h1>URL SHORTNER</h1>
+               <form action="" method="POST">
+                   {% csrf_token %}
+
+                   <input type="text" name="link" id="link" placeholder="Shorten your link">
+                   <button type="submit">Shorten Url</button>
+
+                  
+                   <a href="" target="_blank">Generated Link :
+                       <span>{{new_url}}</span>
+                   </a>
+               </form>
+           </div>
+       
+    
+</body>
+</html>
