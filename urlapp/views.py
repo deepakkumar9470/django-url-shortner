@@ -31,7 +31,7 @@ def createUrl(req):
             url = UrlModel(full_url = full_url , short_url =short_url)
             url.save() 
 
-        new_url = "http://localhost:8000/" + short_url
+        new_url = "https://django-url-shortner-app.herokuapp.com/" + short_url
         return render(req, 'urlapp/index.html', {"new_url": new_url})             
 
 
